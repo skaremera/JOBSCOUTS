@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>JobScout — Real Remote Job Search</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-icon">💼</span>
+      <div>
+        <h1>JobScout</h1>
+        <p class="tagline">Search real, live remote job listings</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls-panel">
+      <div class="controls">
+        <div class="control">
+          <label for="search-input">Keyword</label>
+          <input id="search-input" type="text" placeholder="e.g. React, Marketing, Data..." />
+        </div>
+        <div class="control">
+          <label for="category-select">Category</label>
+          <select id="category-select">
+            <option value="">All categories</option>
+            <option value="software-dev">Software Development</option>
+            <option value="customer-support">Customer Support</option>
+            <option value="design">Design</option>
+            <option value="marketing">Marketing</option>
+            <option value="sales">Sales</option>
+            <option value="product">Product</option>
+            <option value="data">Data</option>
+            <option value="writing">Writing</option>
+          </select>
+        </div>
+        <div class="control">
+          <label for="sort-select">Sort by</label>
+          <select id="sort-select">
+            <option value="date-desc">Newest first</option>
+            <option value="date-asc">Oldest first</option>
+            <option value="title">Title (A–Z)</option>
+            <option value="company">Company (A–Z)</option>
+          </select>
+        </div>
+        <button id="search-btn" type="button">Search</button>
+      </div>
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+    </section>
+
+    <section id="results" class="results"></section>
+  </main>
+
+  <footer class="footer">
+    <p>Live job data powered by the <a href="https://remotive.com/api-documentation" target="_blank" rel="noopener">Remotive API</a>. Not affiliated with Remotive.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
