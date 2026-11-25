@@ -8,6 +8,7 @@ module.exports = async (req, res) => {
   const category = (req.query.category || '').trim();
   const limit = Math.min(parseInt(req.query.limit, 10) || 40, 100);
 
+  
   const params = new URLSearchParams();
   if (search) params.set('search', search);
   if (category) params.set('category', category);
