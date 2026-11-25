@@ -7,8 +7,8 @@
   const statusEl = document.getElementById('status');
   const resultsEl = document.getElementById('results');
 
-  let jobs = [];
-
+  let jobs = []; 
+  
   function setStatus(msg, type) {
     statusEl.textContent = msg || '';
     statusEl.className = 'status' + (type ? ' ' + type : '');
